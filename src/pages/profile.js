@@ -1,6 +1,7 @@
 import React from 'react'
 import * as users from '../../data/users.json'
 import User from '../components/user'
+import Layout from '../components/layout'
 
 /**
  * This should function as a generic profile of a user suitable to 
@@ -40,7 +41,7 @@ export default function Profile(props) {
   //use Effect to fetch user as needed
   if (loaded) {
     return (
-      <main>
+      <Layout>
         <h1>My Profile</h1>
         <User 
           name={user.name}
@@ -56,7 +57,7 @@ export default function Profile(props) {
         ) : (
           <p>No relationships yet!</p>
         )}</div>
-      </main>)
+      </Layout>)
   } else {
     return (<div>Loading...</div>)
   }

@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'gatsby'
 import Planets from '../components/planets'
+import Layout from '../components/layout'
 
 export default function Home() {
   const [title, setTitle] = React.useState('')
@@ -17,13 +17,8 @@ export default function Home() {
 
 return (
   <main>
-    <div style={{float: "right"}}>
-      <Link to='/profile/'>My Profile</Link>
-    </div>
-    <h1>{title}</h1>
-    <div>
-      <Link to='/about/'>About Orbit</Link>
-    </div>
-    <Planets />
+    <Layout>
+      <Planets />
+    </Layout>
   </main>)
 }

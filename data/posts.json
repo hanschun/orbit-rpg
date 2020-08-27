@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "sender": "01",
+    "body": "I'm not a big fan of shooter games. I also think I prefer a console controller to a PC keyboard for a lot of games.",
+    "thumbUps": 0,
+    "thumbDowns": 0,
+    "subject": "video games"
+  },
+  {
+    "id": "2",
+    "sender": "02",
+    "body": "That's valid, lots of games are just easier with a controller. I like being able to hotkey my whole inventory on PC.",
+    "thumbUps": 0,
+    "thumbDowns": 0,
+    "subject": "video games"
+  },
+  {
+    "id": "3",
+    "sender": "01",
+    "body": "OMG you're so right, I hate that about console games! But I always hit the wrong keyboard key on accident!!!",
+    "thumbUps": 0,
+    "thumbDowns": 0,
+    "subject": "video games"
+  },
+  {
+    "id": "4",
+    "sender": "01",
+    "body": "I just want bread, but I can't find flour anywhere!",
+    "thumbUps": 0,
+    "thumbDowns": 0,
+    "subject": "baking"
+  }
+]

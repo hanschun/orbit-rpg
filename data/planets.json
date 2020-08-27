@@ -1,26 +1,14 @@
 [
   {
     "heading": "robotics",
-    "subjects": [
-      "ai",
-      "automation",
-      "programming"
-    ]
+    "subjects": ["ai", "automation", "programming"]
   },
   {
     "heading": "baking",
-    "subjects": [
-      "cake",
-      "bread",
-      "biscuits"
-    ]
+    "subjects": ["cake", "bread", "biscuits"]
   },
   {
     "heading": "games",
-    "subjects": [
-      "video games",
-      "tabletop games",
-      "board games"
-    ]
+    "subjects": ["video games", "tabletop games", "board games"]
   }
 ]

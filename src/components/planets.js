@@ -1,5 +1,5 @@
 import React from 'react'
-
+// import * as planets from '../../data/planets.json'
 const planets = [
   {
     heading: 'robotics',
@@ -20,6 +20,7 @@ export default function Planets(props) {
 
 
   function ListItem({item}) {
+    // UPDATE THIS TO A GRAPHQL QUERY TO FIND ALL POSTS BY SUBJECT
   return <div>{item}</div>
   }
 
@@ -36,6 +37,7 @@ export default function Planets(props) {
     const listItems = list.map((i) => (
       <>
         <h2>{i.heading}</h2>
+        {/* <Link to={/`i.heading`/} />  THIS WILL BE IMPLEMENTED WITH A GRAPHQL QUERY */}
         <SubjectList list={i.subjects} />
       </>
       )

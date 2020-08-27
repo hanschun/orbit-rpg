@@ -1,0 +1,12 @@
+[
+  {
+    "id": "01",
+    "avatar": "https://en.gravatar.com/userimage/82409445/b1199252c40f45c462b7f49b4b01eab4.jpeg",
+    "name": "Hans",
+    "bio": "Eat dessert first",
+    "favoriteWords": ["baking", "robots", "games"],
+    "relationships": [],
+    "posts": [],
+    "specialMessages": []
+  }
+]

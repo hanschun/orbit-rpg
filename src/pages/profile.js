@@ -1,15 +1,13 @@
 import React from 'react'
-import * as users from '../../data/users.json'
-import User from '../components/user'
 import Layout from '../components/layout'
-
+import ProfileDetails from '../components/profile-detail';
+import {graphql} from 'gatsby'
 /**
  * This should function as a generic profile of a user suitable to 
  * allow players to see details
  * @params id: id string of user to display profile of
  */
-export default function Profile(props) {
-  const {id} = props;
+export default function Profile({data}) {
   const [user, setUser] = React.useState({
     name: '',
     id: '',
@@ -23,44 +21,41 @@ export default function Profile(props) {
   const [loaded, setLoaded] = React.useState(false)
 
   React.useEffect(() => {
-    // if no user is specified by the props.id field, get default user
-    if (!id) {
+    console.log(JSON.stringify(data.usersJson))
+    if (data.usersJson) {
+      let u = data.usersJson
       setUser({
         ...user,
-        name: users[0].name,
-        id: users[0].id,
-        avatar: users[0].avatar,
-        bio: users[0].bio,
-        favoriteWords: users[0].favoriteWords
+        name: u.name,
+        id: u.id,
+        avatar: u.avatar,
+        bio: u.bio,
+        favoriteWords: u.favoriteWords
       });
     }
+   
     setLoaded(true)
     return (() => {})
-  }, [id, user])
+  }, [user, data])
 
   //use Effect to fetch user as needed
   if (loaded) {
     return (
       <Layout>
         <h1>My Profile</h1>
-        <User 
-          name={user.name}
-          avatar={user.avatar}
-          bio={user.bio}
-        />
-      <div>Id: {user.id}</div>  
-      <div>Favorites: {user.favoriteWords.join(', ')}</div>
-      <div>Posts made: {user.posts.length}</div>
-      <div>Special messages: {user.specialMessages.length}</div>
-      <div>Relationships: {user.relationships.length > 0 ? (
-        <div>ships</div>
-        ) : (
-          <p>No relationships yet!</p>
-        )}</div>
+        <ProfileDetails user={user} />
       </Layout>)
   } else {
     return (<div>Loading...</div>)
   }
-  
-
 }
+
+// should be able to extract this into a query that matches a user cookie?
+export const pageQuery = graphql`
+  query($id: String! = "01") {
+    # select the user that equals this id
+    usersJson(id: { eq: $id}) {
+      ...UserDetail_details
+    }
+  }
+`

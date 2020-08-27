@@ -6,13 +6,8 @@ import { rhythm } from '../utils/typography'
 import presets from '../utils/presets'
 
 export default function PostDetail({post}) {
-  const {
-    id
-  } = post;
-
   return (
     <div
-      // onClick={e => e.stopPropagation()}
       css={{
         background: `white`,
         display: `flex`,
@@ -47,50 +42,6 @@ export default function PostDetail({post}) {
           <PostDetails post={post} />
         </div>
       </div>
-      {/* <div
-        to={`/${id}/`}
-        css={{
-          display: `block`,
-          backgroundColor: `lightgray`,
-          flex: `1 0 0%`,
-          width: `100%`,
-          position: `relative`,
-        }}
-      >
-        <div
-          css={{
-            flexDirection: `column`,
-            flexShrink: 0,
-            position: `relative`,
-            paddingBottom: `100%`,
-            overflow: `hidden`,
-          }}
-        >
-          <div
-            css={{
-              flexDirection: `column`,
-              flexShrink: 0,
-              position: `absolute`,
-              top: 0,
-              bottom: 0,
-              left: 0,
-              right: 0,
-            }}
-          />
-        </div>
-      </div> */}
-      {/* <div
-        css={{
-          background: `white`,
-          padding: rhythm(3 / 4),
-          display: `block`,
-          [presets.Tablet]: {
-            display: `none`,
-          },
-        }}
-      >
-        <PostDetails post={post}/>
-      </div> */}
     </div>
   )
 }

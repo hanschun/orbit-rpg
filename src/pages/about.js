@@ -2,16 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import {graphql} from 'gatsby'
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
-
 export default function About({data}) {
   return (
     <Layout>
@@ -21,3 +11,13 @@ export default function About({data}) {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
